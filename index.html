@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+
+    <form action="https://httpbin.org/post" method="POST">
+            <!-- <input type="hidden" value="" name=""> UI allows you to send the value you want without seeing(UI görmeyen istediğin değeri göndermene yarar)-->
+            
+        <div class="form-row"> 
+            <label for="name">Name:</label>       
+            <input name="name" id="name" type="text" required/> <!--placeholder-->
+            <br>
+            <label for="surname">Surname:</label>
+            <input name="surname" id="surname" type="text" required/> <!--disable user can't enter input-->
+        </div>
+        
+        <div class="form-row">
+            <label for="tel">Phone Number:</label>
+            <input name="tel" type="tel" value="+9" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">E-mail:</label>
+            <input name="email" type="email" value="@gmail.com" required>
+        </div>
+
+        <div class="form-row">
+            <label for="msg">Message:</label>
+            <textarea name="msg" id="msg"  rows="5" required></textarea>
+           
+        </div>
+
+        <div class="form-row">
+            <label for="city">City:</label>
+            <select name="city" id="city" >
+                <option value="Istanbul" selected>Istanbul</option> <!--selected input default-->
+                <option value="Ankara">Ankara</option>
+                <option value="Izmir">Izmir</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <p>Color:</p>
+
+            <div class="radio-container">
+                <label> <input type="radio" name="color" value="red" checked/>Red</label> <!--checked input default-->
+                <label> <input type="radio" name="color" value="green"/>Green</label>
+                <label> <input type="radio" name="color" value="blue"/>Blue</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="btn">
+            <button type="reset">Reset</button>
+            <button type="submit">Send</button>
+            </div>
+        </div>
+
+    </form>
+
+  
+</body>
+
+</html>
